@@ -1,10 +1,3 @@
-/*
-* @Author: mmall
-* @Date:   2017-05-27 17:57:49
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-28 19:48:16
-*/
-
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
@@ -15,7 +8,7 @@ var Pagination      = require('util/pagination/index.js');
 var templateIndex   = require('./index.string');
 
 var page = {
-    data : {
+    data : { // 全局放置，listParam是列表信息，包括关键字、每页数量等
         listParam : {
             keyword         : _mm.getUrlParam('keyword')    || '',
             categoryId      : _mm.getUrlParam('categoryId') || '',
@@ -75,7 +68,7 @@ var page = {
             listParam   = this.data.listParam,
             $pListCon   = $('.p-list-con');
         $pListCon.html('<div class="loading"></div>');
-        // 删除参数中不必要的字段
+        // 删除参数中不必要的字段(加括号可以避免优先级方面的问题)
         listParam.categoryId 
             ? (delete listParam.keyword) : (delete listParam.categoryId);
         // 请求接口
