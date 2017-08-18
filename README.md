@@ -11,5 +11,6 @@ a shopping website which use webpack &amp; jquery
 开发模式: npm run dev (windows系统上为npm run dev_win)
 生产模式: npm run dist (windows系统上为npm run dist_win)  
 6、开发模式下预览项目  
-访问： 
-```   http://localhost:8088/dist/view/index.html
+访问： [href]( http://localhost:8088/dist/view/index.html)  
+
+``` 
