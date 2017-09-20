@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-08-25 22:09:51
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-08-28 22:48:31
+* @Last Modified time: 2017-09-20 22:44:52
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -14,8 +14,8 @@ var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 // 配置html-webpack-plugin
 var getHtmlConfig  = function (name, title) {
     return {
-        template: './src/view' + name + '.html',
-        filename: 'view/' + name, // 目标文件的名字，和output同级
+        template: './src/view/' + name + '.html',
+        filename: 'view/' + name + '.html', // 目标文件的名字，和output同级
         title: title,
         inject: true,
         hash: true,
@@ -36,7 +36,7 @@ var config = {
     },
     // 模块化加载外部文件
     externals: {
-        'jquery': window.jquery
+        'jquery': 'window.jquery'
     },
     module: {
         loaders: [
@@ -44,6 +44,15 @@ var config = {
             // 处理图片和图标字体
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
         ]
+    },
+    resolve: {
+        alias: {
+            node_modules: __dirname + '/node_modules',
+            util: __dirname + '/src/util',
+            page: __dirname + '/src/page',
+            service: __dirname + '/src/service',
+            image: __dirname + '/src/image'
+        }
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
