@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-08-25 22:09:51
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-09-20 22:44:52
+* @Last Modified time: 2017-10-18 21:55:57
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -25,9 +25,10 @@ var getHtmlConfig  = function (name, title) {
 
 var config = {
     entry: {
-        'common': ['./src/page/common/index'], // 全局变量
-        'index': ['./src/page/index/index'],
-        'login': ['./src/page/login/index']
+        'common': ['./src/page/common/index.js'], // 全局变量
+        'index': ['./src/page/index/index.js'],
+        'login': ['./src/page/login/index.js']
+
     },
     output: {
         path: './dist',
@@ -41,8 +42,8 @@ var config = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
-            // 处理图片和图标字体
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+            { test: /\.string$/, loader: 'html-loader' }
         ]
     },
     resolve: {

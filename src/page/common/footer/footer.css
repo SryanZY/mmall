@@ -1,0 +1,23 @@
+/* 
+* @Author: SryanZY
+* @Date:   2017-10-18 22:29:03
+* @Last Modified by:   SryanZY
+* @Last Modified time: 2017-10-18 22:30:14
+*/
+.footer{
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
