@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-09-20 21:49:21
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-09-25 21:45:31
+* @Last Modified time: 2017-10-26 22:44:33
 */
 //var Hogan = require('hogan');
 var conf = {
@@ -32,7 +32,7 @@ var _mm = {
         })
     },
     // 获取服务器地址(即接口路径)
-    getUserUrl: function (path) {
+    getServerUrl: function (path) {
         return conf.serverHost + path;
     },
     // 获取URL参数
@@ -42,11 +42,11 @@ var _mm = {
         return result ? decodeURIComponent(result[2]) : null;
     },
     // 渲染HTML(根据hogan模板)
-    // renderHtml: function (htmlTemplate, data) {
-    //     var template = Hogan.compile(htmlTemplate),
-    //         result = template.render(data);
-    //     return result;
-    // },
+    renderHtml: function (htmlTemplate, data) {
+        var template = Hogan.compile(htmlTemplate),
+            result = template.render(data);
+        return result;
+    },
     // 成功提示
     successTips : function(msg){
         alert(msg || '操作成功！');
