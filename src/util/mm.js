@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-09-20 21:49:21
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-10-26 22:44:33
+* @Last Modified time: 2017-11-27 21:56:12
 */
 //var Hogan = require('hogan');
 var conf = {
@@ -71,7 +71,7 @@ var _mm = {
     },
     // 登录(redirect到来时的页面，以防有特殊字符需要编码)
     doLogin: function () {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     // 返回主页
     goHome: function () {

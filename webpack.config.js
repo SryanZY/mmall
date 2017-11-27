@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-08-25 22:09:51
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-10-26 22:28:25
+* @Last Modified time: 2017-11-27 23:02:06
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -27,7 +27,7 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'], // 全局变量
         'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/index.js'],
+        'user-login': ['./src/page/user-login/index.js'],
         'result' : ['./src/page/result/index.js'],
 
     },
@@ -42,9 +42,9 @@ var config = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-            { test: /\.string$/, loader: 'html-loader' }
+            { test: /\.string$/, loader: 'html-loader'}
         ]
     },
     resolve: {
@@ -64,7 +64,7 @@ var config = {
         new ExtractTextPlugin('css/[name].css'),
         // 对html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果')),
     ]
 };
