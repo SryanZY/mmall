@@ -2,9 +2,9 @@
 * @Author: SryanZY
 * @Date:   2017-09-20 21:49:21
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-11-27 21:56:12
+* @Last Modified time: 2017-11-28 22:26:34
 */
-//var Hogan = require('hogan');
+// var Hogan = require('hogan');
 var conf = {
     serverHost: ''
 };
@@ -42,11 +42,11 @@ var _mm = {
         return result ? decodeURIComponent(result[2]) : null;
     },
     // 渲染HTML(根据hogan模板)
-    renderHtml: function (htmlTemplate, data) {
-        var template = Hogan.compile(htmlTemplate),
-            result = template.render(data);
-        return result;
-    },
+    // renderHtml: function (htmlTemplate, data) {
+    //     var template = Hogan.compile(htmlTemplate),
+    //         result = template.render(data);
+    //     return result;
+    // },
     // 成功提示
     successTips : function(msg){
         alert(msg || '操作成功！');

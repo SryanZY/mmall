@@ -2,7 +2,7 @@
 * @Author: SryanZY
 * @Date:   2017-08-25 22:09:51
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-11-27 23:02:06
+* @Last Modified time: 2017-12-03 20:39:26
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -28,8 +28,12 @@ var config = {
         'common': ['./src/page/common/index.js'], // 全局变量
         'index': ['./src/page/index/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
+        'user-register': ['./src/page/user-register/index.js'],
+        'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
+        'user-center' : ['./src/page/user-center/index.js'],
+        'user-center-update' : ['./src/page/user-center-update/index.js'],
+        'user-pass-update' : ['./src/page/user-pass-update/index.js'],
         'result' : ['./src/page/result/index.js'],
-
     },
     output: {
         path: './dist',
@@ -65,7 +69,12 @@ var config = {
         // 对html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '登录')),
-        new HtmlWebpackPlugin(getHtmlConfig('result', '结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '结果'))
     ]
 };
 

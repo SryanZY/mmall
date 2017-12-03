@@ -2,58 +2,78 @@
 * @Author: SryanZY
 * @Date:   2017-09-25 21:46:45
 * @Last Modified by:   SryanZY
-* @Last Modified time: 2017-09-25 22:24:35
+* @Last Modified time: 2017-12-03 20:04:11
 */
 
 /*css reset*/
-* {
+*{
     margin: 0;
     padding: 0;
 }
-body {
+body{
     background: #f6f6f6;
     font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
-    /*字体大小12px，行高1.5倍*/
 }
-li {
+li{
     list-style: none;
 }
-img {
+img{
     display: block;
     border: none;
 }
-label {
+label{
     cursor: pointer;
 }
-input[type='checkbox'] {
+input[type='checkbox']{
     cursor: pointer;
 }
 
-/*定宽布局*/
-.w {
+/* 定宽布局 */
+.w{
     width: 1080px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
+}
+
 /* 全局通用样式 */
-.hide {
+/* 隐藏类 */
+.hide{
     display: none;
 }
-.link {
+/* 超链样式 */
+.link{
     color: #999;
     cursor: pointer;
     text-decoration: none;
 }
-.link:hover {
+.link:hover{
     color: #e80012;
 }
-.link-text {
+.link-text{
     color: #999;
     text-decoration: none;
 }
-.btn {
+/* btn */
+.btn{
     display: inline-block;
     padding: 0 20px;
     height: 40px;
@@ -68,19 +88,20 @@ input[type='checkbox'] {
     cursor: pointer;
     text-decoration: none;
 }
-.btn-mini {
+.btn-mini{
     height: 25px;
     line-height: 25px;
     font-size: 12px;
     padding: 0 10px;
 }
-.loading {
+/* loading */
+.loading{
     margin: 10px auto;
     display: block;
     width: 65px;
     height: 65px;
     border: 1px solid #ddd;
-    background: url(../../image/icon/loading.gif) no-repeat;
     border-radius: 5px;
+    background: url(../../image/icon/loading.gif) no-repeat;
     opacity: .6;
 }
